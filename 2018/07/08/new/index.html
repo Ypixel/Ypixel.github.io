@@ -108,14 +108,18 @@
 
 
 
-  <meta property="og:type" content="article">
+  <meta name="description" content="虚拟机安装了kali之后，还是永不习惯firefox，没办法只能吧chrome装回来 chrome的用户资料同步让我在Linux里面同步win上的书签和配置着实很方便 但是找了很久kali 里面不允许root账户启动chrome，装好也打不开，一般都是创建一个伪账户使用的。 翻了这么多帖子，终于翻到了一个nice的解决办法，无需使用虚拟账户，改一下启动配置就ok  下载chrome安装包wget">
+<meta name="keywords" content="kali">
+<meta property="og:type" content="article">
 <meta property="og:title" content="new">
 <meta property="og:url" content="http://yoursite.com/2018/07/08/new/index.html">
 <meta property="og:site_name" content="sengle&#39;s blog">
+<meta property="og:description" content="虚拟机安装了kali之后，还是永不习惯firefox，没办法只能吧chrome装回来 chrome的用户资料同步让我在Linux里面同步win上的书签和配置着实很方便 但是找了很久kali 里面不允许root账户启动chrome，装好也打不开，一般都是创建一个伪账户使用的。 翻了这么多帖子，终于翻到了一个nice的解决办法，无需使用虚拟账户，改一下启动配置就ok  下载chrome安装包wget">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-08T08:22:49.128Z">
+<meta property="og:updated_time" content="2018-07-13T09:39:28.322Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="new">
+<meta name="twitter:description" content="虚拟机安装了kali之后，还是永不习惯firefox，没办法只能吧chrome装回来 chrome的用户资料同步让我在Linux里面同步win上的书签和配置着实很方便 但是找了很久kali 里面不允许root账户启动chrome，装好也打不开，一般都是创建一个伪账户使用的。 翻了这么多帖子，终于翻到了一个nice的解决办法，无需使用虚拟账户，改一下启动配置就ok  下载chrome安装包wget">
 
 
 
@@ -323,6 +327,22 @@
             
 
             
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-07-13 17:39:28" itemprop="dateModified" datetime="2018-07-13T17:39:28+08:00">2018-07-13</time>
+              
+            
           </span>
 
           
@@ -353,7 +373,22 @@
       
 
       
-        
+        <p> 虚拟机安装了kali之后，还是永不习惯firefox，没办法只能吧chrome装回来</p>
+<p>chrome的用户资料同步让我在Linux里面同步win上的书签和配置着实很方便</p>
+<p>但是找了很久kali 里面不允许root账户启动chrome，装好也打不开，一般都是创建一个伪账户使用的。</p>
+<p>翻了这么多帖子，终于翻到了一个nice的解决办法，无需使用虚拟账户，改一下启动配置就ok</p>
+<hr>
+<h1 id="下载chrome安装包"><a href="#下载chrome安装包" class="headerlink" title="下载chrome安装包"></a>下载chrome安装包</h1><pre><code>wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+</code></pre><h1 id="用gdebi安装，顺便解决依赖问题（自动帮你下载所有的依赖包。）"><a href="#用gdebi安装，顺便解决依赖问题（自动帮你下载所有的依赖包。）" class="headerlink" title="用gdebi安装，顺便解决依赖问题（自动帮你下载所有的依赖包。）"></a>用gdebi安装，顺便解决依赖问题（自动帮你下载所有的依赖包。）</h1><p><code>gdebi google-chrome-stable_current_amd64.deb</code></p>
+<h1 id="安装好了之后，发现点击chrome图标没有任何响应"><a href="#安装好了之后，发现点击chrome图标没有任何响应" class="headerlink" title="安装好了之后，发现点击chrome图标没有任何响应"></a>安装好了之后，发现点击chrome图标没有任何响应</h1><h1 id="修改启动属性"><a href="#修改启动属性" class="headerlink" title="修改启动属性"></a>修改启动属性</h1><p>​    用文件资源管理器按照这个路径打开  /usr/share/applications/  </p>
+<pre><code>找到 google chrome 图标，鼠标右键打开属性
+
+在命令哪行  /usr/bin/google-chrome-stable %U 替换为 
+
+/usr/bin/google-chrome --no-sandbox --user-data-dir
+
+注意空格
+</code></pre><h1 id="关闭标签，打开使用"><a href="#关闭标签，打开使用" class="headerlink" title="关闭标签，打开使用"></a>关闭标签，打开使用</h1>
       
     </div>
 
@@ -370,6 +405,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/kali/" rel="tag"># kali</a>
+          
+        </div>
       
 
       
@@ -437,8 +478,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -462,6 +512,19 @@
               
 
               
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                    
+                      
+                    
+                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-name">tags</span>
+                  
+                </div>
+              
             </nav>
           
 
@@ -483,6 +546,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#下载chrome安装包"><span class="nav-number">1.</span> <span class="nav-text">下载chrome安装包</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#用gdebi安装，顺便解决依赖问题（自动帮你下载所有的依赖包。）"><span class="nav-number">2.</span> <span class="nav-text">用gdebi安装，顺便解决依赖问题（自动帮你下载所有的依赖包。）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装好了之后，发现点击chrome图标没有任何响应"><span class="nav-number">3.</span> <span class="nav-text">安装好了之后，发现点击chrome图标没有任何响应</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#修改启动属性"><span class="nav-number">4.</span> <span class="nav-text">修改启动属性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关闭标签，打开使用"><span class="nav-number">5.</span> <span class="nav-text">关闭标签，打开使用</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
