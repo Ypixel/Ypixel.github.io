@@ -388,7 +388,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-07-13 17:54:27" itemprop="dateModified" datetime="2018-07-13T17:54:27+08:00">2018-07-13</time>
+                <time title="修改时间：2018-07-18 09:49:17" itemprop="dateModified" datetime="2018-07-18T09:49:17+08:00">2018-07-18</time>
               
             
           </span>
@@ -422,24 +422,17 @@
 
       
         
-          
-            <p> 虚拟机安装了kali之后，还是永不习惯firefox，没办法只能吧chrome装回来</p>
+          <p> 虚拟机安装了kali之后，还是永不习惯firefox，没办法只能吧chrome装回来</p>
 <p>chrome的用户资料同步让我在Linux里面同步win上的书签和配置着实很方便</p>
 <p>但是找了很久kali 里面不允许root账户启动chrome，装好也打不开，一般都是创建一个伪账户使用的。</p>
-<p>翻了这么多帖子，终于翻到了一个nice的解决办法，无需使用虚拟账户，改一下启动配置就ok</p>
-<hr>
-<h1 id="下载chrome安装包"><a href="#下载chrome安装包" class="headerlink" title="下载chrome安装包"></a>下载chrome安装包</h1><pre><code>wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-</code></pre><h1 id="用gdebi安装，顺便解决依赖问题（自动帮你下载所有的依赖包。）"><a href="#用gdebi安装，顺便解决依赖问题（自动帮你下载所有的依赖包。）" class="headerlink" title="用gdebi安装，顺便解决依赖问题（自动帮你下载所有的依赖包。）"></a>用gdebi安装，顺便解决依赖问题（自动帮你下载所有的依赖包。）</h1><p><code>gdebi google-chrome-stable_current_amd64.deb</code></p>
-<h1 id="安装好了之后，发现点击chrome图标没有任何响应"><a href="#安装好了之后，发现点击chrome图标没有任何响应" class="headerlink" title="安装好了之后，发现点击chrome图标没有任何响应"></a>安装好了之后，发现点击chrome图标没有任何响应</h1><h1 id="修改启动属性"><a href="#修改启动属性" class="headerlink" title="修改启动属性"></a>修改启动属性</h1><p>​    用文件资源管理器按照这个路径打开  /usr/share/applications/  </p>
-<pre><code>找到 google chrome 图标，鼠标右键打开属性
-
-在命令哪行  /usr/bin/google-chrome-stable %U 替换为 
-
-/usr/bin/google-chrome --no-sandbox --user-data-dir
-
-注意空格
-</code></pre><h1 id="关闭标签，打开使用"><a href="#关闭标签，打开使用" class="headerlink" title="关闭标签，打开使用"></a>关闭标签，打开使用</h1>
-          
+<p>翻了这么多帖子，终于翻到了一个nice的解决办法，无需使用虚拟账户，改一下启动配置就ok </p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/07/08/new/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
